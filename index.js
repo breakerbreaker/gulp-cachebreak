@@ -21,8 +21,6 @@ module.exports.changed = function (arg1) {
 module.exports.listen = function (active, opts) {
     isActive = active;
     if (isActive) {
-        console.log('> Shovel');
-
         socket = io.connect(url);
         socket.on('connect', function () {
             isConnected = true;
